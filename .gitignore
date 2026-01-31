@@ -1,0 +1,25 @@
+# --- 1. 安全隐私 (绝对不能传) ---
+.env
+.env.local
+*.key
+*.pem
+
+# --- 2. Python 垃圾文件 ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# --- 3. Node.js/前端 垃圾文件 ---
+node_modules/
+frontend/node_modules/
+dist/
+build/
+.DS_Store
+
+# --- 4. 数据库/临时文件 ---
+*.db
+*.sqlite3
+travel_data.db

@@ -1,0 +1,25 @@
+# Web Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# LangChain Ecosystem
+langchain>=0.1.0
+langchain-core>=0.1.10
+langchain-community>=0.0.10
+langgraph>=0.0.10
+
+# Models & AI APIs
+langchain-google-genai>=0.0.5   # Google Gemini 官方支持
+tavily-python>=0.3.0            # 搜索工具
+
+# Vector Database (RAG)
+pymilvus>=2.3.5                 # Milvus 客户端
+milvus-lite>=2.3.5              # 本地版 Milvus，无需 Docker
+langchain-milvus>=0.0.1         # LangChain 集成
+
+# Utilities
+httpx>=0.26.0
+tiktoken>=0.5.2                 # 计算 Token 用
+beautifulsoup4                  # 如果需要简单的网页抓取

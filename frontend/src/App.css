@@ -1,0 +1,153 @@
+/* frontend/src/App.css */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f6f8;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* --- 左侧配置面板 --- */
+.config-panel {
+  flex: 0 0 300px; /* 固定宽度 300px */
+  background: white;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.config-panel h2 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+select, input[type="text"], .date-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100%; /* 撑满 */
+  box-sizing: border-box;
+}
+
+select:disabled {
+  background-color: #f9f9f9;
+  cursor: not-allowed;
+}
+
+.generate-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.generate-btn:active {
+  transform: scale(0.98);
+}
+.generate-btn:disabled {
+  background: #ccc;
+}
+
+/* --- 中间聊天区 (调整样式以适应新布局) --- */
+.chat-box {
+  flex: 1; /* 占据剩余空间 */
+  display: flex;
+  flex-direction: column;
+  background: white;
+  margin: 0; /* 去掉之前的margin */
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+header {
+  padding: 15px;
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+}
+
+.messages-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f0f2f5;
+}
+
+.message { display: flex; }
+.message.user { justify-content: flex-end; }
+.message.ai { justify-content: flex-start; }
+
+.bubble {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.message.user .bubble {
+  background: #007bff;
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.message.ai .bubble {
+  background: white;
+  color: #333;
+  border-bottom-left-radius: 2px;
+}
+
+/* --- 右侧 Debug 面板 (保持不变，稍微美化) --- */
+.debug-panel {
+  flex: 0 0 300px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.debug-item {
+  background: rgba(255,255,255,0.08);
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+/* react-datepicker 样式微调 */
+.react-datepicker-wrapper {
+  width: 100%;
+}
